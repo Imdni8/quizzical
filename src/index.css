@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    font-family: "Karla";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f7fb;
+    /* border: red 1px solid; */
+    height: 100vh;
+    width: 100vw;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 0.25em;
+    /* border: red 1px solid; */
+}
+
+.intro p {
+    margin: 0 0 1.5em;
+    font-size: 1em;
+    font-weight: 400;
+    /* border: red 1px solid; */
+}
+
+.quizSection {
+    padding: 3em;
+    /* border: red solid 0.5px; */
+}
