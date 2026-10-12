@@ -46,12 +46,33 @@ button {
     cursor: pointer;
 }
 
+.question li.faded {
+    opacity: 0.5;
+}
+
+.question li.faded:hover {
+    background-color: #f5f7fb;
+}
+
 .question li.selected {
     background-color: #d6dbf5;
     color: #293264;
     font-weight: 600;
 }
 
+.question li.correct {
+    background-color: lightgreen;
+}
+
+.question li.incorrect {
+    background-color: lightcoral;
+}
+
 .question li:hover {
     background-color: #dbe0fa;
+}
+
+.score {
+    display: flex;
+    gap: 0.5em;
 }
