@@ -28,7 +28,7 @@ function App() {
                     return {
                         question: decode(result.question),
                         options_arr: cleanedOption,
-                        correct_option: result.correct_answer,
+                        correct_option: decode(result.correct_answer),
                     };
                 });
 
@@ -37,8 +37,6 @@ function App() {
                 setSelectedOptions(new Array(quizQuestions).fill(null));
             });
     }
-
-    useEffect(() => console.log(quiz), [quiz]);
 
     // Tracking selected options indexed based on their question number
     function selectOption(option, QuesIndex) {
@@ -54,8 +52,6 @@ function App() {
             });
         }
     }
-
-    console.log(selectedOptions);
 
     // Rendering the quiz
     const quizSection = quiz.map((ques, quesIndex) => {
