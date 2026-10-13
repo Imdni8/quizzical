@@ -97,9 +97,11 @@ function App() {
         // show when user attempts all questions
         else if (allAttempted && !gameChecked) {
             return (
-                <button onClick={() => setGameChecked(true)}>
-                    Check answers
-                </button>
+                <section className="game-control">
+                    <button onClick={() => setGameChecked(true)}>
+                        Check answers
+                    </button>
+                </section>
             );
         }
         // render score
@@ -110,7 +112,7 @@ function App() {
             const score = correct_attempts.length + "/" + quiz.length;
 
             return (
-                <section className="score">
+                <section className="game-control">
                     <p>You scored {score} correct answers</p>
                     <button onClick={startQuiz}>Play again</button>
                 </section>
@@ -120,15 +122,15 @@ function App() {
 
     return (
         <main>
-            {quiz.length > 0 ? null : (
+            {quiz.length > 0 ? (
+                <section>{quizSection}</section>
+            ) : (
                 <section className="intro">
                     <h1>Quizzical</h1>
                     <p>Click to begin</p>
                     <button onClick={startQuiz}>Start quiz</button>
                 </section>
             )}
-
-            <section className="quizSection">{quizSection}</section>
 
             <GameControls />
         </main>

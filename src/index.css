@@ -1,24 +1,17 @@
 * {
     box-sizing: border-box;
-}
-
-main {
     font-family: "Karla";
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 body {
     margin: 0;
+    background-color: #f5f7fb;
+    padding: 1em 3em;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5f7fb;
+    min-height: 100dvh;
     /* border: red 1px solid; */
-    height: 100vh;
-    width: 100vw;
 }
 
 .intro {
@@ -26,6 +19,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    /* border: red 1px solid; */
 }
 
 .intro h1 {
@@ -43,7 +38,16 @@ body {
     /* border: red 1px solid; */
 }
 
-.quizSection {
-    padding: 3em;
-    /* border: red solid 0.5px; */
+.game-control {
+    margin-top: 2em;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    /* border: red 1px solid; */
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
